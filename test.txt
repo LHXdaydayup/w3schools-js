@@ -1,0 +1,6 @@
+提交作业常使用的几句命令行:
+1. git status
+2. git add your file name
+3. git commit -m "Your description"
+4. git log
+5. git push origin master
