@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First JavaScript</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header">
+        <h1>My First JavaScript</h1>
+    </div>
+    <div class="button-container">
+        <!--第一次作业写的代码-->
+        <!--<button onclick="document.getElementById('demo').innerHTML = new Date().toString();">Click me to display the standard time !</button>-->
+        <!--修改后的代码如下-->
+        <button id="time">Click me to display the standard time !</button>
+    </div>
+
+    <div class="date-container">
+        <p id="demo"></p>
+    </div>
+
+</div>
+<script>
+    window.document.getElementById('time').addEventListener('click', function () {
+        this.textContent = new Date().toString();
+        window.document.getElementById('demo').innerHTML = 'The title of the button has changed !';
+    })
+</script>
+</body>
+</html>

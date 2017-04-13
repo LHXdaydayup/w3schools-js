@@ -7,3 +7,10 @@
 .date-container{
     text-align: center;
 }
+.content-container{
+    text-align: center;
+}
+.attention{
+    text-align: center;
+    color: red;
+}

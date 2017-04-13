@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Can Change HTML Content</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header">
+        <h1>What Can JavaScript Do?</h1>
+        <h2>JavaScript Can Change HTML Content.</h2>
+    </div>
+
+    <div class="content-container">
+        <p id="demo">JavaScript Can Change HTML Content. Look here.</p>
+    </div>
+
+    <div class="button-container">
+        <button onclick="clickMe()">
+            Click Me!
+        </button>
+        <button onclick="clickReset()">
+            Reset
+        </button>
+    </div>
+    <p id="pContent" class="attention"></p>
+</div>
+<script>
+    function clickMe() {
+        var demo = document.getElementById('demo');
+        demo.innerHTML = 'Hello JavaScript! This is my change!';
+    }
+    function clickReset() {
+        document.getElementById('demo').innerHTML = 'JavaScript can change HTML content. Look here.';
+        document.getElementById('pContent').innerHTML = 'Contents of which have been reset.';
+    }
+</script>
+</body>
+</html>
