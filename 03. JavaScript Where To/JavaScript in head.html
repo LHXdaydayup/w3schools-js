@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript in head</title>
+    <script>
+        function changeStyles() {
+            var element = document.getElementById("element");
+            var elementStyle = element.style;
+            var red = Math.ceil(Math.random() * 256), green = Math.ceil(Math.random() * 256), blue = Math.ceil(Math.random() * 256);
+            elementStyle.color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+        }
+    </script>
+</head>
+<body>
+<div>
+    <h1>Scripts can be placed in the body, or in the head section of an HTML page, or in both.</h1>
+    <h3><pre>
+        In this example, a JavaScript function is placed in the head section of an HTML page.
+        The function is invoked (called) when a button is clicked:
+    </pre></h3>
+
+    <div>
+        <button onclick="changeStyles()">change font color</button>
+    </div>
+
+    <div>
+        <p id="element">
+            Changing the style of an HTML element, is a variant of changing an HTML attribute:
+        </p>
+        <p>Each click can see different colors, wonderful!</p>
+    </div>
+</div>
+</body>
+</html>

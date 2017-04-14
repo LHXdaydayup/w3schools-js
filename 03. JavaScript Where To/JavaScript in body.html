@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript in body</title>
+</head>
+<body>
+<div>
+    <h3>In this example, a JavaScript function is placed in the body section of an HTML page.</h3>
+    <p id="demo">A Paragraph.</p>
+
+    <button type="button" onclick="changeParagraph()">Try it</button>
+
+    <script>
+        function changeParagraph() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+    </script>
+</div>
+</body>
+</html>
