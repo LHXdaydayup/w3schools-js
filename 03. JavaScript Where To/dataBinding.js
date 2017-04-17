@@ -1,6 +1,7 @@
 /**
  * Created by Huaxiang on 2017/4/14.
  */
+
 (function () {
     var elems = [document.getElementById('el'), document.getElementById('input')];
 
