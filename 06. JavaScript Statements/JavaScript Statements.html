@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Statements</title>
+</head>
+<body>
+<h1>In HTML, JavaScript statements are executed by the browser.</h1>
+<h2>JavaScript statements often start with a keyword to identify the JavaScript action to be performed.</h2>
+
+<h4>JavaScript Statements</h4>
+<p id="statement"></p>
+
+<h4>JavaScript Programs</h4>
+<p id="program"></p>
+
+<h4>JavaScript Line Length and Line Breaks</h4>
+<p id="line"></p>
+
+<h4>JavaScript Code Blocks</h4>
+<p id="code_blocks">Hi,JavaScript Statements</p>
+<button onclick="change()">change</button>
+<script>
+    document.getElementById("statement").innerHTML = "Hello Dolly.";
+    var x, y, z;
+    x = 5;
+    y = 7;
+    z = x + y;
+    document.getElementById("program").innerHTML = z;
+    //JavaScript Line Length and Line Breaks
+    document.getElementById("line").innerHTML =
+            "Hello Dolly.";
+    //JavaScript Code Blocks
+    function change() {
+        document.getElementById("code_blocks").innerHTML = "JavaScript statements can be grouped together in code blocks, inside curly brackets {...}.";
+    }
+</script>
+</body>
+</html>
