@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Syntax</title>
+</head>
+<body>
+<h3>JavaScript Programs</h3>
+<p id="program"></p>
+
+<h3>JavaScript Literals</h3>
+<p id="literal"></p>
+
+<h3>JavaScript Variables</h3>
+<p id="variable"></p>
+
+<h3>JavaScript Operators</h3>
+<p id="operator"></p>
+
+<h3>JavaScript Expressions</h3>
+<p id="expression"></p>
+
+<h3>JavaScript Comments</h3>
+<p id="comment"></p>
+
+<h3>JavaScript is Case Sensitive</h3>
+<p id="caseSensitive1"></p>
+<p id="caseSensitive2"></p>
+
+<script>
+    var x, y, z;
+    x = 5;
+    y = 7;
+    z = x + y;
+    document.getElementById('program').innerText = z;
+    document.getElementById('literal').innerText = 10.50 + 101;
+    var i = 0;
+    document.getElementById('variable').innerText = i;
+    document.getElementById('operator').innerText = (8 + 9) * 10;
+    document.getElementById('expression').innerText = i + 10 + "10";
+    //z = 100
+    document.getElementById('comment').innerText = z;
+    var lastname, lastName;
+    lastName = "Doe";
+    lastname = "Peterson";
+    document.getElementById('caseSensitive1').innerText = lastname;
+    document.getElementById('caseSensitive2').innerText = lastName;
+</script>
+</body>
+</html>
