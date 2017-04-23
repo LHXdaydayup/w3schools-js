@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Operators</title>
+</head>
+<body>
+<h3>Assignment</h3>
+<p id="assignment"></p>
+
+<h3>Adding</h3>
+<p id="adding"></p>
+
+<h3>Multiplying</h3>
+<p id="multiplying"></p>
+
+<h3>JavaScript Arithmetic Operators</h3>
+<p id="addition"></p>
+<p id="subtraction"></p>
+<p id="multiplication"></p>
+<p id="division"></p>
+<p id="modulus"></p>
+<p id="increment"></p>
+<p id="decrement"></p>
+
+<h3>JavaScript Assignment Operators</h3>
+<p id="addition-assignment"></p>
+<p id="subtraction-assignment"></p>
+<p id="multiplication-assignment"></p>
+<p id="division-assignment"></p>
+<p id="modulus-assignment"></p>
+
+<h3>JavaScript String Operators</h3>
+<p id="concatenate"></p>
+<p id="concatenate-assignment"></p>
+
+<h3>Adding Strings and Numbers</h3>
+<p id="number"></p>
+<p id="string-number"></p>
+
+<h3>JavaScript Comparison Operators</h3>
+<p id="nubmer-equal-to-string"></p>
+<p id="equal-value-and-type"></p>
+<p id="greater-than"></p>
+<p id="less-than"></p>
+<p id="greater-than-or-equal-to"></p>
+
+<h3>JavaScript Logical Operators</h3>
+<p id="logical-and"></p>
+<p id="logical-or"></p>
+<p id="logical-not"></p>
+
+<h3>JavaScript Type Operators</h3>
+<p id="typeof"></p>
+<p id="instance-of-date"></p>
+<p id="instance-of-object"></p>
+
+<h3>JavaScript Bitwise Operators</h3>
+<p id="and"></p>
+<p id="or"></p>
+<p id="not"></p>
+<p id="xor"></p>
+<script>
+    var x = 10;
+    document.getElementById('assignment').innerHTML = x;
+    var y = 4;
+    var z = x + y;
+    document.getElementById('adding').innerHTML = z;
+    z = x * y;
+    document.getElementById('multiplying').innerHTML = z;
+    z = x + y;
+    document.getElementById('addition').innerHTML = z;
+    z = x - y;
+    document.getElementById('subtraction').innerHTML = z;
+    z = x * y;
+    document.getElementById('multiplication').innerHTML = z;
+    z = x / y;
+    document.getElementById('division').innerHTML = z;
+    z = x % y;
+    document.getElementById('modulus').innerHTML = z;
+    x++;
+    document.getElementById('increment').innerHTML = x;
+    y--;
+    document.getElementById('decrement').innerHTML = y;
+    z += y;
+    document.getElementById('addition-assignment').innerHTML = z;
+    z -= y;
+    document.getElementById('subtraction-assignment').innerHTML = z;
+    z *= y;
+    document.getElementById('multiplication-assignment').innerHTML = z;
+    z /= x;
+    document.getElementById('division-assignment').innerHTML = z;
+    z %= y;
+    document.getElementById('modulus-assignment').innerHTML = z;
+    var str1 = "Hi";
+    var str2 = "nice to meet you";
+    var str3 = str1 + ',' + str2;
+    document.getElementById('concatenate').innerHTML = str3;
+    str1 += '!';
+    document.getElementById('concatenate-assignment').innerHTML = str1;
+    var number = 5 + 5;
+    document.getElementById('number').innerHTML = number;
+    var stringNumber = "5" + 20;
+    document.getElementById('string-number').innerHTML = stringNumber;
+    var numberFive = 5, stringFive = '5';
+    document.getElementById('nubmer-equal-to-string').textContent = (numberFive == stringFive);
+    document.getElementById('equal-value-and-type').textContent = (numberFive === stringFive);
+    document.getElementById('greater-than').textContent = (number > stringFive);
+    document.getElementById('less-than').textContent = (number < stringFive);
+    document.getElementById('greater-than-or-equal-to').textContent = (numberFive >= stringFive);
+    var booleanTrue = true, booleanFalse = false;
+    document.getElementById('logical-and').textContent = booleanTrue && booleanFalse;
+    document.getElementById('logical-or').textContent = booleanTrue || booleanFalse;
+    document.getElementById('logical-not').textContent = !booleanTrue;
+    document.getElementById('typeof').textContent = typeof booleanTrue;
+    var currentDate = new Date();
+    document.getElementById('instance-of-date').textContent = currentDate instanceof Date;
+    document.getElementById('instance-of-object').textContent = currentDate instanceof Object;
+    document.getElementById('and').textContent = 6 & 1;
+    document.getElementById('or').textContent = 6 | 1;
+    document.getElementById('not').textContent = ~6;
+    document.getElementById('xor').textContent = 6 ^ 1;
+</script>
+</body>
+</html>
