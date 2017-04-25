@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Assignment</title>
+</head>
+<body>
+<h3>JavaScript Assignment Operators</h3>
+<p id="assignment"></p>
+<p id="addition-assignment"></p>
+<p id="subtraction-assignment"></p>
+<p id="multiplication-assignment"></p>
+<p id="division-assignment"></p>
+<p id="modulus-assignment"></p>
+<p id="zero-fill-left-shift-assignment"></p>
+<p id="signed-right-shift-assignment"></p>
+<p id="zero-fill-right-shift-assignment"></p>
+<p id="and-assignment"></p>
+<p id="or-assignment"></p>
+<p id="xor-assignment"></p>
+<p id="exponentiation-assignment"></p>
+
+<script>
+    var x = 10;
+    document.getElementById("assignment").textContent = x;
+    x += 10;
+    document.getElementById("addition-assignment").textContent = x;
+    x -= 4;
+    document.getElementById("subtraction-assignment").textContent = x;
+    x *= 3;
+    document.getElementById("multiplication-assignment").textContent = x;
+    x /= 2;
+    document.getElementById("division-assignment").textContent = x;
+    x %= 10;
+    document.getElementById("modulus-assignment").textContent = x;
+    x <<= 2;
+    document.getElementById("zero-fill-left-shift-assignment").textContent = x;
+    x >>= 2;
+    document.getElementById("signed-right-shift-assignment").textContent = x;
+    x >>>= 1;
+    document.getElementById("zero-fill-right-shift-assignment").textContent = x;
+    x &= 2;
+    document.getElementById("and-assignment").textContent = x;
+    x |= 1;
+    document.getElementById("or-assignment").textContent = x;
+    x ^= 1;
+    document.getElementById("xor-assignment").textContent = x;
+    x **= 6;
+    document.getElementById("exponentiation-assignment").textContent = x;
+</script>
+</body>
+</html>

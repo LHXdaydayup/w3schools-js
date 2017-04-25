@@ -2,9 +2,41 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>JavaScript Arithmetic</title>
 </head>
 <body>
+<h3>A typical thing to do with numbers is arithmetic.</h3>
+<h3>JavaScript Arithmetic Operators</h3>
+<p id="addition"></p>
+<p id="subtraction"></p>
+<p id="multiplication"></p>
+<p id="division"></p>
+<p id="modulus"></p>
+<p id="increment"></p>
+<p id="decrement"></p>
 
+<h3>Operator precedence describes the order in which operations are performed in an arithmetic expression.</h3>
+<h3>Operator Precedence</h3>
+<p id="precedence"></p>
+<h3>Multiplication (*) and division (/) have higher precedence than addition (+) and subtraction (-).</h3>
+<h3>When using parentheses, the operations inside the parentheses are computed first.</h3>
+<script>
+    var x = 12, y = 40;
+    z = x + y;
+    document.getElementById('addition').textContent = z;
+    z = x - y;
+    document.getElementById('subtraction').textContent = z;
+    z = x * y;
+    document.getElementById('multiplication').textContent = z;
+    z = x / y;
+    document.getElementById('division').textContent = z;
+    z = x % y;
+    document.getElementById('modulus').textContent = z;
+    x++;
+    document.getElementById('increment').textContent = x;
+    y--;
+    document.getElementById('decrement').textContent = y;
+    document.getElementById('precedence').textContent = 10 + 350 * 2;
+</script>
 </body>
 </html>
