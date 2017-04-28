@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+<h3>JavaScript Objects</h3>
+<p id="create"></p>
+
+<h3>Object Properties</h3>
+<p id="property-value"></p>
+
+<h3>Object Methods</h3>
+<p id="methods"></p>
+
+<h3>Object Definition</h3>
+<p id="definition"></p>
+
+<h3>Accessing Object Properties</h3>
+<p id="access-property-one"></p>
+<p id="access-property-two"></p>
+
+<h3>Accessing Object Methods</h3>
+<p id="access-method-one"></p>
+<p id="access-method-two"></p>
+
+<script>
+    var car = {type: "Fiat", model: 500, color: 'white', speed: 0};
+    document.getElementById("create").textContent = typeof  car;
+    for (var property in car) {
+        document.getElementById("property-value").textContent += car[property] + ',';
+    }
+    car.drive = function () {
+        this.speed = 80;
+    };
+    car.drive();
+    document.getElementById("methods").textContent = car.speed;
+    //Object Definition
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 36,
+        eyeColor: "blue",
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    document.getElementById("definition").textContent = typeof person;
+    document.getElementById("access-property-one").textContent = person.firstName;
+    document.getElementById("access-property-two").textContent = person['lastName'];
+    document.getElementById("access-method-one").textContent = person.fullName();
+    document.getElementById("access-method-two").textContent = person.fullName;
+</script>
+</body>
+</html>
