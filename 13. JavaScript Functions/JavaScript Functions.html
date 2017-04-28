@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+<h3>JavaScript Functions</h3>
+<p id="function"></p>
+
+<h3>Function Return</h3>
+<p id="return"></p>
+
+<h3>Why Functions?</h3>
+<p id="77"></p>
+<p id="120"></p>
+
+<h3>The () Operator Invokes the Function</h3>
+<p id="function-definition"></p>
+
+<h3>Functions Used as Variable Values</h3>
+<p id="used-as-variable-values"></p>
+<script>
+    function multiplication(p1, p2) {
+        return p1 * p2;
+    }
+    document.getElementById("function").textContent = multiplication(4, 23);
+    var x = division(10, 4);
+    function division(p1, p2) {
+        return p1 / p2;
+    }
+    document.getElementById("return").textContent = x;
+    function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+    document.getElementById("77").textContent = toCelsius(77);
+    document.getElementById("120").textContent = toCelsius(120);
+    document.getElementById("function-definition").textContent = toCelsius;
+    document.getElementById("used-as-variable-values").textContent = "The temperature is " + toCelsius(90) + " Celsius";
+</script>
+</body>
+</html>
