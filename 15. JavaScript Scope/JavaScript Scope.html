@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Scope</title>
+</head>
+<body>
+<h3>Local JavaScript Variables</h3>
+<p id="local-outside"></p>
+<p id="local-inside"></p>
+
+<h3>Global JavaScript Variables</h3>
+<p id="global-outside"></p>
+<p id="global-inside"></p>
+
+<h3>Automatically Global</h3>
+<p id="automatically-outside"></p>
+<p id="automatically-inside"></p>
+
+<h3>Global Variables in HTML</h3>
+<p id="use-with-window"></p>
+<p id="use-auto-with-window"></p>
+
+<script>
+    var globalVariable = 'global';
+    defineVariable();
+    document.getElementById("local-outside").textContent = typeof localVariable;
+    document.getElementById("global-outside").textContent = typeof globalVariable;
+    document.getElementById("automatically-outside").textContent = typeof automaticallyGlobal;
+    function defineVariable() {
+        var localVariable = 'Hello, World!';
+        automaticallyGlobal = 'Hi';
+        document.getElementById("local-inside").textContent = localVariable;
+        document.getElementById("global-inside").textContent = globalVariable;
+        document.getElementById("automatically-inside").textContent = automaticallyGlobal;
+    }
+    document.getElementById("use-with-window").textContent = window.globalVariable;
+    document.getElementById("use-auto-with-window").textContent = window.automaticallyGlobal;
+</script>
+</body>
+</html>
