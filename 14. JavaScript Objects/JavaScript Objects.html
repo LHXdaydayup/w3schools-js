@@ -6,7 +6,7 @@
 </head>
 <body>
 <h3>JavaScript Objects</h3>
-<p id="create"></p>
+<p id="creation"></p>
 
 <h3>Object Properties</h3>
 <p id="property-value"></p>
@@ -27,7 +27,7 @@
 
 <script>
     var car = {type: "Fiat", model: 500, color: 'white', speed: 0};
-    document.getElementById("create").textContent = typeof  car;
+    document.getElementById("creation").textContent = typeof  car;
     for (var property in car) {
         document.getElementById("property-value").textContent += car[property] + ',';
     }
