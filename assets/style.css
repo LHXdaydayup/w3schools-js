@@ -14,3 +14,12 @@
     text-align: center;
     color: red;
 }
+.test-div{
+    width: 300px;
+    height: 300px;
+    border: solid 1px red;
+    background-color: white;
+}
+.test-div:hover{
+    background-color: aqua;
+}

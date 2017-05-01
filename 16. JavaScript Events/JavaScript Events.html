@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Events</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<h3>JavaScript Events</h3>
+<button onclick="document.getElementById('time-p').textContent = new Date().toString()">Time ?</button>
+<p id="time-p"></p>
+<button onclick="this.textContent = new Date()">Time?</button>
+<br>
+
+<input onchange="document.getElementById('onchange').textContent = this.value">
+<p id="onchange"></p>
+
+<div class="test-div"></div>
+<input onkeydown="document.getElementById('key-down').textContent = this.value">
+<p id="key-down"></p>
+
+<input onkeydown="document.getElementById('key-down-typeof').textContent = typeof this.value">
+<p id="key-down-typeof"></p>
+
+<input onkeydown="document.getElementById('key-up').textContent = this.value">
+<p id="key-up"></p>
+
+<script>
+    window.onload = function () {
+        alert("page on load");
+    }
+</script>
+</body>
+</html>
