@@ -27,6 +27,8 @@
     document.getElementById("local-outside").textContent = typeof localVariable;
     document.getElementById("global-outside").textContent = typeof globalVariable;
     document.getElementById("automatically-outside").textContent = typeof automaticallyGlobal;
+    document.getElementById("use-with-window").textContent = window.globalVariable;
+    document.getElementById("use-auto-with-window").textContent = window.automaticallyGlobal;
     function defineVariable() {
         var localVariable = 'Hello, World!';
         automaticallyGlobal = 'Hi';
@@ -34,8 +36,6 @@
         document.getElementById("global-inside").textContent = globalVariable;
         document.getElementById("automatically-inside").textContent = automaticallyGlobal;
     }
-    document.getElementById("use-with-window").textContent = window.globalVariable;
-    document.getElementById("use-auto-with-window").textContent = window.automaticallyGlobal;
 </script>
 </body>
 </html>
