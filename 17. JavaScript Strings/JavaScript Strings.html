@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Strings</title>
+</head>
+<body>
+<h3>JavaScript Strings</h3>
+<p id="double-quotes"></p>
+<p id="single-quotes"></p>
+<p id="single-quote-inside-double-quotes"></p>
+<p id="single-quotes-inside-double-quotes"></p>
+<p id="double-quotes-inside-single-quotes"></p>
+
+<h3>String Length</h3>
+<p id="string-length"></p>
+
+<h3>Special Characters</h3>
+<p id="single-quote"></p>
+<p id="double-quote"></p>
+<p id="backslash"></p>
+
+<h3>Breaking Long Code Lines</h3>
+<p id="line-break"></p>
+
+<h3>Strings Can be Objects</h3>
+<p id="string"></p>
+<p id="string-object"></p>
+<p id="string-equal-object"></p>
+<p id="string-equal-object-with-type"></p>
+<p id="object-equal-object-with-type"></p>
+
+<script>
+    var double = "Hi";
+    var single = 'Hello';
+    var singleQuoteInsideDoubleQuotes = "It\'s alright";
+    var singleQuotesInsideDoubleQuotes = "He is called 'Johnny'";
+    var doubleQuotesInsideSingleQuotes = 'He is called "Johnny"';
+    var singleQuote = 'It\'s alright';
+    var txt = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var x = "Hi";
+    var y = new String("Hi");
+    var z = new String("Hi");
+    document.getElementById("double-quotes").textContent = double;
+    document.getElementById("single-quotes").textContent = single;
+    document.getElementById("single-quote-inside-double-quotes").textContent = singleQuoteInsideDoubleQuotes;
+    document.getElementById("single-quotes-inside-double-quotes").textContent = singleQuotesInsideDoubleQuotes;
+    document.getElementById("double-quotes-inside-single-quotes").textContent = doubleQuotesInsideSingleQuotes;
+    document.getElementById('string-length').textContent = txt.length;
+    document.getElementById("single-quote").textContent = singleQuote;
+    document.getElementById("double-quote").textContent = "We are the so-called \"Vikings\" from the north.";
+    document.getElementById("backslash").textContent = "file path is D:\\workspace\\test.txt";
+    document.getElementById("line-break").innerHTML = "Hello \
+        Dolly!";
+    document.getElementById("string").textContent = typeof x;
+    document.getElementById("string-object").textContent = typeof y;
+    document.getElementById("string-equal-object").textContent = x == y;
+    document.getElementById("string-equal-object-with-type").textContent = x === y;
+    document.getElementById("object-equal-object-with-type").textContent = z === y;
+</script>
+
+</body>
+</html>
