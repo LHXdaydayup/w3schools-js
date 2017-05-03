@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript String Methods</title>
+</head>
+<body>
+<h3>JavaScript String Methods</h3>
+<p id="string-length"></p>
+
+<h3>Finding a String in a String</h3>
+<p id="index-of"></p>
+<p id="last-index-of"></p>
+
+<h3>Searching for a String in a String</h3>
+<p id="search"></p>
+<h5>The two methods, indexOf() and search(), are equal.</h5>
+
+<h3>Extracting String Parts</h3>
+<h3>The slice() Method</h3>
+<p id="slice"></p>
+<p id="slice-negative-parameter"></p>
+<p id="slice-omit-second-parameter"></p>
+<h3>The substring() Method</h3>
+<p id="substring"></p>
+<h3>The substr() Method</h3>
+<p id="substr"></p>
+
+<h3>Replacing String Content</h3>
+<p id="replace"></p>
+<p id="regular-replace"></p>
+<h5>The replace() method can also take a regular expression as the search value.</h5>
+<h5> By default, the replace() function replaces only the first match. To replace all matches, use a regular expression with a g flag (for global match)</h5>
+
+<h3>Converting to Upper and Lower Case</h3>
+<p id="upper"></p>
+<p id="lower"></p>
+
+<h3>The concat() Method</h3>
+<p id="concat"></p>
+
+<h3>Extracting String Characters</h3>
+<h3>The charAt() Method</h3>
+<p id="char-at"></p>
+<h3>The charCodeAt() Method</h3>
+<p id="char-code-at"></p>
+<h3>Accessing a String as an Array is Unsafe</h3>
+<p id="array-access"></p>
+
+<h3>Converting a String to an Array</h3>
+<p id="convert-to-array"></p>
+
+<script>
+    var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var str = "Please locate where 'locate' occurs!";
+    document.getElementById("string-length").textContent = txt.length;
+    document.getElementById("index-of").textContent = str.indexOf('locate');
+    document.getElementById("last-index-of").textContent = str.lastIndexOf('locate');
+    document.getElementById("search").textContent = str.search('locate');
+    document.getElementById("slice").textContent = str.slice(7, 13);
+    document.getElementById("slice-negative-parameter").textContent = str.slice(-15, -9);
+    document.getElementById("slice-omit-second-parameter").textContent = str.slice(7);
+    document.getElementById("substring").textContent = str.substring(7, 13);
+    document.getElementById("substr").textContent = str.substr(7, 6);
+    document.getElementById("replace").textContent = str.replace("locate", "FIND");
+    document.getElementById("regular-replace").textContent = str.replace(/locate/g, "FIND");
+    document.getElementById("upper").textContent = str.toUpperCase();
+    document.getElementById("lower").textContent = str.toLowerCase();
+    document.getElementById("concat").textContent = "Hello".concat(" ", "world!");
+    document.getElementById("concat").textContent = "Hello".concat(" ", "world!");
+    document.getElementById("char-at").textContent = str.charAt(2);
+    document.getElementById("char-code-at").textContent = str.charCodeAt(2);
+    document.getElementById("array-access").textContent = str[2];
+    document.getElementById("convert-to-array").textContent = txt.split('')[2];
+</script>
+</body>
+</html>
