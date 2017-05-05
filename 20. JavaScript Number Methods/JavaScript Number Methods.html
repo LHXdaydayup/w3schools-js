@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Number Methods</title>
+</head>
+<body>
+<h3>The toString() Method</h3>
+<p id="variable-to-string"></p>
+<p id="literal-to-string"></p>
+<p id="expression-to-string"></p>
+
+<h3>The toExponential() Method</h3>
+<p id="to-exponential-2"></p>
+<p id="to-exponential-4"></p>
+<p id="to-exponential-6"></p>
+
+<h3>The toFixed() Method</h3>
+<p id="to-fixed-0"></p>
+<p id="to-fixed-2"></p>
+<p id="to-fixed-4"></p>
+<p id="to-fixed-6"></p>
+
+<h3>The toPrecision() Method</h3>
+<p id="to-precision"></p>
+<p id="to-precision-2"></p>
+<p id="to-precision-4"></p>
+<p id="to-precision-6"></p>
+
+<h3>The valueOf() Method</h3>
+<p id="variable-value-of"></p>
+<p id="literal-value-of"></p>
+<p id="expression-value-of"></p>
+
+<h3>Global Methods</h3>
+<h3>The Number() Method</h3>
+<p id="number-true"></p>
+<p id="number-false"></p>
+<p id="number-date"></p>
+<p id="number-string"></p>
+<p id="number-NaN"></p>
+
+<h4>The parseInt() Method</h4>
+<p id="parse-int-number"></p>
+<p id="parse-int-float"></p>
+<p id="parse-int-number-number"></p>
+<p id="parse-int-number-string"></p>
+<p id="parse-int-string-number"></p>
+
+<h3>The parseFloat() Method</h3>
+<p id="parse-float-number"></p>
+<p id="parse-float-float"></p>
+<p id="parse-float-number-number"></p>
+<p id="parse-float-number-string"></p>
+<p id="parse-float-string-number"></p>
+
+<h3>Number Properties</h3>
+<p id="max-value"></p>
+<p id="min-value"></p>
+<p id="negative-infinity"></p>
+<p id="NaN"></p>
+<p id="infinity"></p>
+
+<script>
+    var x = 32;
+    var y = 9.634;
+    document.getElementById("variable-to-string").textContent = x.toString();
+    document.getElementById("literal-to-string").textContent = (32).toString();
+    document.getElementById("expression-to-string").textContent = (23 + 42).toString();
+    document.getElementById("to-exponential-2").textContent = y.toExponential(2);
+    document.getElementById("to-exponential-4").textContent = y.toExponential(4);
+    document.getElementById("to-exponential-6").textContent = y.toExponential(6);
+    document.getElementById("to-fixed-0").textContent = y.toFixed(0);
+    document.getElementById("to-fixed-2").textContent = y.toFixed(2);
+    document.getElementById("to-fixed-4").textContent = y.toFixed(4);
+    document.getElementById("to-fixed-6").textContent = y.toFixed(6);
+    document.getElementById("to-precision").textContent = y.toPrecision();
+    document.getElementById("to-precision-2").textContent = y.toPrecision(2);
+    document.getElementById("to-precision-4").textContent = y.toPrecision(4);
+    document.getElementById("to-precision-6").textContent = y.toPrecision(6);
+    document.getElementById("variable-value-of").textContent = x.valueOf();
+    document.getElementById("literal-value-of").textContent = (32).valueOf();
+    document.getElementById("expression-value-of").textContent = (23 + 42).valueOf();
+    document.getElementById("number-true").textContent = Number(true);
+    document.getElementById("number-false").textContent = Number(false);
+    document.getElementById("number-date").textContent = Number(new Date());
+    document.getElementById("number-string").textContent = Number("12");
+    document.getElementById("number-NaN").textContent = Number("12 03");
+    document.getElementById("parse-int-number").textContent = parseInt("14");
+    document.getElementById("parse-int-float").textContent = parseInt("12.03");
+    document.getElementById("parse-int-number-number").textContent = parseInt("12 03 02");
+    document.getElementById("parse-int-number-string").textContent = parseInt("12 years");
+    document.getElementById("parse-int-string-number").textContent = parseInt("years 12");
+    document.getElementById("parse-float-number").textContent = parseFloat("14");
+    document.getElementById("parse-float-float").textContent = parseFloat("12.03");
+    document.getElementById("parse-float-number-number").textContent = parseFloat("12 03 02");
+    document.getElementById("parse-float-number-string").textContent = parseFloat("12 years");
+    document.getElementById("parse-float-string-number").textContent = parseFloat("years 12");
+    document.getElementById("max-value").textContent = Number.MAX_VALUE;
+    document.getElementById("min-value").textContent = Number.MIN_VALUE;
+    document.getElementById("negative-infinity").textContent = Number.NEGATIVE_INFINITY;
+    document.getElementById("NaN").textContent = Number.NaN;
+    document.getElementById("infinity").textContent = Number.POSITIVE_INFINITY;
+</script>
+</body>
+</html>
