@@ -23,3 +23,7 @@
 .test-div:hover{
     background-color: aqua;
 }
+.attention-custom-format-date{
+    color: red;
+    font-weight: bold;
+}
