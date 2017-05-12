@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Date Methods</title>
+</head>
+<body>
+<h3>Date Get Methods</h3>
+<h3>The getTime() Method</h3>
+<p id="get-time"></p>
+
+<h3>The getFullYear() Method</h3>
+<p id="get-full-year"></p>
+
+<h3>The getDay() Method</h3>
+<p id="get-day"></p>
+
+<p id="get-date"></p>
+<p id="get-hours"></p>
+<p id="get-milliseconds"></p>
+<p id="get-minutes"></p>
+<p id="get-month"></p>
+<p id="get-seconds"></p>
+
+<h3>Date Set Methods</h3>
+<h3>The setFullYear() Method</h3>
+<p id="set-full-year"></p>
+
+<h3>The setDate() Method</h3>
+<p id="set-date"></p>
+<p id="add-dates"></p>
+
+<h3>Date Input - Parsing Dates</h3>
+<p id="parse"></p>
+<p id="convert-to-date"></p>
+
+<h3>Compare Dates</h3>
+<p id="compare-dates"></p>
+
+<h3>UTC Date Methods</h3>
+<p id="get-UTC-date"></p>
+<p id="get-UTC-day"></p>
+<p id="get-UTC-full-year"></p>
+<p id="get-UTC-hours"></p>
+<p id="get-UTC-milliseconds"></p>
+<p id="get-UTC-minutes"></p>
+<p id="get-UTC-month"></p>
+<p id="get-UTC-seconds"></p>
+
+<script>
+    /**
+     *
+     * Date methods let you get and set date values (years, months, days, hours, minutes, seconds, milliseconds).
+     *
+     */
+    var date = new Date();
+    date.setFullYear(2027);
+    date.setDate(32);
+    date.setDate(date.getDate() + 75);
+    document.getElementById("get-time").textContent = date.getTime().toString();
+    document.getElementById("get-full-year").textContent = date.getFullYear().toString();
+    document.getElementById("get-day").textContent = date.getDay().toString();
+    document.getElementById("get-date").textContent = date.getDate().toString();
+    document.getElementById("get-hours").textContent = date.getHours().toString();
+    document.getElementById("get-milliseconds").textContent = date.getMilliseconds().toString();
+    document.getElementById("get-minutes").textContent = date.getMinutes().toString();
+    document.getElementById("get-month").textContent = date.getMonth().toString();
+    document.getElementById("get-seconds").textContent = date.getSeconds().toString();
+    document.getElementById('set-full-year').textContent = date.toString();
+    document.getElementById('set-date').textContent = date.toString();
+    document.getElementById('add-dates').textContent = date.toString();
+    document.getElementById('parse').textContent = Date.parse("May 9, 2017").toString();
+    document.getElementById('convert-to-date').textContent = new Date(Date.parse("May 9, 2017")).toString();
+    document.getElementById('compare-dates').textContent = (new Date()) > (new Date(Date.parse("May 9, 2018")));
+    document.getElementById("get-UTC-date").textContent = date.getUTCDate().toString();
+    document.getElementById("get-UTC-day").textContent = date.getUTCDay().toString();
+    document.getElementById("get-UTC-full-year").textContent = date.getUTCFullYear().toString();
+    document.getElementById("get-UTC-hours").textContent = date.getUTCHours().toString();
+    document.getElementById("get-UTC-milliseconds").textContent = date.getUTCMilliseconds().toString();
+    document.getElementById("get-UTC-minutes").textContent = date.getUTCMinutes().toString();
+    document.getElementById("get-UTC-month").textContent = date.getUTCMonth().toString();
+    document.getElementById("get-UTC-seconds").textContent = date.getUTCSeconds().toString();
+</script>
+</body>
+</html>
