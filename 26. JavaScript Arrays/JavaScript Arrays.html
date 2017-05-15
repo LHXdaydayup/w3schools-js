@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Arrays</title>
+</head>
+<body>
+<h3>Creating an Array</h3>
+<p id="create"></p>
+<p id="create-multiple-lines"></p>
+
+<h3>Using the JavaScript Keyword new</h3>
+<p id="use-new"></p>
+
+<h3>Access the Elements of an Array</h3>
+<p id="access"></p>
+
+<h3>Access the Full Array</h3>
+<p id="access-full-array"></p>
+
+<h3>Arrays are Objects</h3>
+<p id="type-of"></p>
+<p id="access-array"></p>
+<p id="access-object"></p>
+
+<h3>Array Elements Can Be Objects</h3>
+<p id="object-element"></p>
+
+<h3>Array Properties and Methods</h3>
+<h3>The length Property</h3>
+<p id="length"></p>
+
+<h3>Looping Array Elements</h3>
+<div id="array-loop"></div>
+
+<h3>Adding Array Elements</h3>
+<p id="add-element"></p>
+<p id="add-element-use-length"></p>
+<div id="add-element-use-number"></div>
+
+<h3>How to Recognize an Array</h3>
+<h3>Solution 1:</h3>
+<p id="s1"></p>
+<h3>Solution 2:</h3>
+<p id="s2"></p>
+<h3>Solution 3:</h3>
+<p id="s3"></p>
+
+<script>
+    var cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("create").textContent = cars;
+    var names = [
+        'John',
+        'Mary',
+        'Tom'
+    ];
+    document.getElementById("create-multiple-lines").textContent = names;
+    var numbers = new Array(1, 2, 3, 4, 5, 455, 7, 8, 9);
+    document.getElementById("use-new").textContent = numbers;
+    document.getElementById("access").textContent = cars[0];
+    document.getElementById("access-full-array").textContent = cars;
+    document.getElementById("type-of").textContent = typeof cars;
+    document.getElementById("access-array").textContent = cars[0];
+    var person = {firstName: "John", lastName: "Doe", age: 46};
+    document.getElementById("access-object").textContent = person.firstName;
+    var list = [Date.now, person];
+    document.getElementById("object-element").textContent = list;
+    document.getElementById("length").textContent = list.length;
+    var text = '<ul>';
+    for (var i = 0; i < cars.length; i++) {
+        text += "<li>" + cars[i] + "</li>";
+    }
+    text += '</ul>';
+    document.getElementById("array-loop").innerHTML = text;
+    list.push('Benz');
+    document.getElementById("add-element").textContent = list.length;
+    list[list.length] = 12132;
+    document.getElementById("add-element-use-length").textContent = list.length;
+    cars[6] = "TOYOTA";
+    var show = '<ul>';
+    for (var i = 0; i < cars.length; i++) {
+        show += "<li>" + cars[i] + "</li>";
+    }
+    show += '</ul>';
+    document.getElementById("add-element-use-number").innerHTML = show;
+    document.getElementById("s1").textContent = Array.isArray(cars);
+    document.getElementById("s2").textContent = isArray(list);
+    document.getElementById("s3").textContent = names instanceof Array;
+    /**
+     * 如果参数是一个数组, 函数始终返回true.
+     * @param x
+     * @returns {boolean}
+     */
+    function isArray(x) {
+        return x.constructor.toString().indexOf("Array") > -1;
+    }
+</script>
+</body>
+</html>
