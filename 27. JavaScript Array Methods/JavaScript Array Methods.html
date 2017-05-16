@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Array Methods</title>
+</head>
+<body>
+<h3>Converting Arrays to Strings</h3>
+<p id="to-string"></p>
+<p id="join"></p>
+
+<h3>Popping and Pushing</h3>
+<h3>Popping</h3>
+<p id="pop"></p>
+<p id="pop-value"></p>
+
+<h3>Pushing</h3>
+<p id="push"></p>
+<p id="push-length"></p>
+
+<h3>Shifting Elements</h3>
+<p id="shift"></p>
+<p id="shift-value"></p>
+<p id="unshift"></p>
+<p id="unshift-length"></p>
+
+<h3>Changing Elements</h3>
+<p id="index"></p>
+<p id="add-element-use-length"></p>
+
+<h3>Deleting Elements</h3>
+<p id="delete"></p>
+
+<h3>Splicing an Array</h3>
+<p id="splice"></p>
+<h3>Using splice() to Remove Elements</h3>
+<p id="splice-remove"></p>
+
+<h3>Merging (Concatenating) Arrays</h3>
+<p id="concat-two-arrays"></p>
+
+<h3>Slicing an Array</h3>
+<p id="slice"></p>
+
+<script>
+    /**
+     * @description  toString()方法将数组转换为数组值的字符串(逗号分隔)
+     * join()方法把数组所有元素连接成一个字符串，还可以指定分隔符
+     * @type {string[]}
+     */
+    var cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("to-string").textContent = cars.toString();
+    document.getElementById("join").textContent = cars.join(' * ');
+    /**
+     * pop()方法删除数组中的最后一个元素; The pop()返回被删除的元素
+     * @type {string[]}
+     */
+    var car = cars.pop();
+    document.getElementById("pop").textContent = cars.toString();
+    document.getElementById("pop-value").textContent = car;
+    /**
+     * push()方法添加一个新元素(数组最后)
+     * @type {string[]}
+     */
+    var car2 = cars.push('TOYOTA');
+    document.getElementById("push").textContent = cars.toString();
+    document.getElementById("push-length").textContent = car2.toString();
+    /**
+     * shift()方法删除第一个数组元素同时改变其它元素下标。
+     * @type {string[]}
+     */
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var fruit = fruits.shift();
+    document.getElementById("shift").textContent = fruits.toString();
+    document.getElementById("shift-value").textContent = fruit;
+    /**
+     * unshift()方法添加一个新元素作为数组第一个元素)
+     * @type {string[]}
+     */
+    var fruit2 = fruits.unshift('Lemon');
+    document.getElementById("unshift").textContent = fruits.toString();
+    document.getElementById("unshift-length").textContent = fruit2.toString();
+    /**
+     * 数组可通过索引改变元素值
+     * @type {string}
+     */
+    fruits[0] = 'Kiwi';
+    document.getElementById("index").textContent = fruits.toString();
+    fruits[fruits.length] = 'Lemon';
+    document.getElementById("add-element-use-length").textContent = fruits.toString();
+    /**
+     * 数组元素可以通过使用JavaScript操作符删除
+     */
+    delete fruits[0];
+    document.getElementById("delete").textContent = typeof fruits[0];
+    /**
+     * The splice() method can be used to add new items to an array
+     * 第一个参数定义的位置应该添加新的元素(拼接)，第二个参数定义了多少元素应该被删除。
+     */
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+    document.getElementById("splice").textContent = fruits.toString();
+    fruits.splice(0, 1);
+    document.getElementById("splice-remove").textContent = fruits.toString();
+    /**
+     * concat()方法创建一个新的数组连接到现有的数组
+     * @type {Array.<string>}
+     */
+    var newArray = cars.concat(fruits);
+    document.getElementById("concat-two-arrays").textContent = newArray.toString();
+    var newFruits = fruits.slice(3);
+    document.getElementById("slice").textContent = newFruits.toString();
+</script>
+</body>
+</html>
