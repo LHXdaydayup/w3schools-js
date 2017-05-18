@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Booleans</title>
+</head>
+<body>
+<h3>The Boolean() Function</h3>
+<p id="boolean"></p>
+
+<h3>Everything With a "Real" Value is True</h3>
+<p id="true"></p>
+
+<h3>Everything Without a "Real" is False</h3>
+<p id="false"></p>
+
+<h3>Booleans Can be Objects</h3>
+<p id="boolean-object"></p>
+<p id="equal"></p>
+<p id="==="></p>
+<p id="compare-objects"></p>
+
+<script>
+    /**
+     * Boolean(),检测表达式(或变量)的真假，返回布尔类型的值
+     * @type {boolean}
+     */
+    document.getElementById("boolean").textContent = Boolean(18 > 12).toString();
+    document.getElementById("true").innerHTML =
+            "100 is " + 100 + "<br>" +
+            "PI is " + Math.PI + "<br>" +
+            "-15 is " + (-15) + "<br>" +
+            "Any (not empty) string is " + 'Hi' + "<br>" +
+            "Even the string 'false' is " + 'false' + "<br>" +
+            "Any expression (except zero) is " + (5 < 6);
+    var x;
+    /**
+     * @description The Boolean value of 0 (zero) is false.
+     * The Boolean value of -0 (minus zero) is false.
+     * The Boolean value of "" (empty string) is false.
+     * The Boolean value of undefined is false.
+     * The Boolean value of null is false.
+     * The Boolean value of false is false.
+     * The Boolean value of NaN is false.
+     * @type {boolean}
+     */
+    document.getElementById("false").innerHTML =
+            "0 is " + Boolean(0) + "<br>" +
+            "-0 is " + Boolean(-0) + "<br>" +
+            "''(empty string) is " + Boolean('') + "<br>" +
+            "undefined variable is " + Boolean(x) + "<br>" +
+            "null is " + Boolean(null) + "<br>" +
+            "false is " + Boolean(false) + "<br>" +
+            "NaN is " + Boolean(10 / "H");
+    document.getElementById("boolean-object").textContent = typeof new Boolean(false);
+    /**
+     * ”==”与”===”一个是判断值是否相等,一个是判断值及类型是否完全相等.
+     * @type {boolean}
+     */
+    document.getElementById("equal").textContent = false == new Boolean(false);
+    document.getElementById("===").textContent = false === new Boolean(false);
+    document.getElementById("compare-objects").textContent = new Boolean(false) === new Boolean(false);
+</script>
+</body>
+</html>
