@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Comparison and Logical Operators</title>
+</head>
+<body>
+<h3>Comparison Operators</h3>
+<p id="equal-to-8"></p>
+<p id="equal-to-5"></p>
+<p id="equal-to-string-5"></p>
+<p id="equal-value-and-type-to-5"></p>
+<p id="equal-value-and-type-to-string-5"></p>
+<p id="not-equal-to-8"></p>
+
+<p id="not-equal-value-nor-type-to-5"></p>
+<p id="not-equal-value-nor-type-to-8"></p>
+<p id="not-equal-value-nor-type-to-string-5"></p>
+
+<p id="greater-than-8"></p>
+<p id="less-than-8"></p>
+<p id="greater-than-or-equal-to-8"></p>
+<p id="less-than-or-equal-to-8"></p>
+
+<h3>Logical Operators</h3>
+<p id="AND"></p>
+<p id="OR"></p>
+<p id="NOT"></p>
+
+<h3>Conditional (Ternary) Operator</h3>
+<p id="ternary"></p>
+
+<script>
+    var x = 5;
+    /**
+     * @description  == 比较两个变量的值是否相等。
+     * === 比较两个变量的值和类型是否相等。
+     * != 比较两个变量的值是否不相等。
+     * !== 比较两个变量的值和类型是否不相等。
+     * > 比较一个变量的值是否大于另外一个变量的值。
+     * < 比较一个变量的值是否小于另外一个变量的值。
+     * >= 比较一个变量的值是否大于等于另外一个变量的值。
+     * <= 比较一个变量的值是否小于等于另外一个变量的值。
+     * @type {boolean}
+     */
+    document.getElementById("equal-to-8").textContent = x == 8;
+    document.getElementById("equal-to-5").textContent = x == 5;
+    document.getElementById("equal-to-string-5").textContent = x == '5';
+    document.getElementById("equal-value-and-type-to-5").textContent = x === 5;
+    document.getElementById("equal-value-and-type-to-string-5").textContent = x === '5';
+    document.getElementById("not-equal-to-8").textContent = x != 8;
+    document.getElementById("not-equal-value-nor-type-to-5").textContent = x !== 5;
+    document.getElementById("not-equal-value-nor-type-to-8").textContent = x !== 8;
+    document.getElementById("not-equal-value-nor-type-to-string-5").textContent = x !== '5';
+    document.getElementById("greater-than-8").textContent = x > 8;
+    document.getElementById("less-than-8").textContent = x < 8;
+    document.getElementById("greater-than-or-equal-to-8").textContent = x >= 8;
+    document.getElementById("less-than-or-equal-to-8").textContent = x <= 8;
+    var y = 12;
+    /**
+     * Logical Operators
+     * @type {boolean}
+     */
+    document.getElementById("AND").textContent = x <= 8 && y > 11;     //比较x是否小于或等于8并且y大于11
+    document.getElementById("OR").textContent = x >= 8 || y > 11;     //比较x是否大于或等于8并且y是否大于11
+    document.getElementById("NOT").textContent = !(x >= 8 || y > 11);
+    document.getElementById("ternary").textContent = (x < 3) ? 'x的值小于3' : 'x的值不小于3';
+</script>
+</body>
+</html>
