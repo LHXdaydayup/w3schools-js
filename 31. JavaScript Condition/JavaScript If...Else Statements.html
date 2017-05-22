@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript If...Else Statements</title>
+</head>
+<body>
+<h3>The if Statement</h3>
+<p id="if"></p>
+
+<h3>The else Statement</h3>
+<p id="else"></p>
+
+<h3>The else if Statement</h3>
+<p id="else-if"></p>
+
+<script>
+    /**
+     * @description Use if to specify a block of code to be executed, if a specified condition is true
+     * Use else to specify a block of code to be executed, if the same condition is false
+     * Use else if to specify a new condition to test, if the first condition is false
+     * Use switch to specify many alternative blocks of code to be executed
+     * @type {number}
+     */
+    var hour = 15;
+    var greeting = '';
+    if (hour < 18) {
+        greeting = "Good day";
+    }
+    document.getElementById("if").textContent = greeting;
+    hour = 21;
+    if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("else").textContent = greeting;
+    hour = 8;
+    if (hour < 10) {
+        greeting = "Good morning";
+    } else if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("else-if").textContent = greeting;
+</script>
+</body>
+</html>
