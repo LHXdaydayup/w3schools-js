@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Switch Statement</title>
+</head>
+<body>
+<h3>The JavaScript Switch Statement</h3>
+<p id="switch"></p>
+
+<h3>The default Keyword</h3>
+<p id="default"></p>
+
+<h3>Common Code Blocks</h3>
+<p id="common-code-blocks"></p>
+
+<script>
+    /**
+     * @description  getDay()方法可返回表示星期的某一天的数字。
+     * case:后面的值就是要和表达式进行比较的值
+     * break:表示程序到这里中断，跳出switch语句
+     * default:如果所有的情况都不匹配,就执行这里
+     * @type {string}
+     */
+    var day = '';
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+    }
+    document.getElementById("switch").textContent = "Today is " + day;
+    var text = '';
+    switch (new Date().getDay()) {
+        case 6:
+            text = "Today is Saturday";
+            break;
+        case 0:
+            text = "Today is Sunday";
+            break;
+        default:
+            text = "Looking forward to the Weekend!";
+    }
+    document.getElementById("default").textContent = text;
+    var str = '';
+    switch (new Date().getDay()) {
+        case 4:
+        case 5:
+            str = "Soon it is Weekend!";
+            break;
+        case 0:
+        case 6:
+            str = "It is Weekend!";
+            break;
+        default:
+            str = "Looking forward to the Weekend!";
+    }
+    document.getElementById("common-code-blocks").textContent = str;
+</script>
+</body>
+</html>
