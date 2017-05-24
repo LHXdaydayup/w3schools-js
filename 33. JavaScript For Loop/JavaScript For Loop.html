@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript For Loop</title>
+</head>
+<body>
+<h3>JavaScript Loops</h3>
+<p id="for"></p>
+
+<h3>Different Kinds of Loops</h3>
+<h3>The For Loop</h3>
+<p id="for-loop"></p>
+
+<h3>The For/In Loop</h3>
+<p id="for-in"></p>
+
+<script>
+    /**
+     * @description  for语句第一步声明变量，并赋值为0，第二步设定条件，变量小于cars数组的长度，
+     * 第三步执行循环主体语句。
+     * 第四步操作表达式决定变量值的变化。
+     * @type {string[]}
+     */
+    var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+    var i, text = '';
+    for (i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+    }
+    document.getElementById("for").innerHTML = text;
+    for (i = 0, len = cars.length, text = ""; i < len;) {
+        text += cars[i] + "<br>";
+        i++;
+    }
+    document.getElementById("for-loop").innerHTML = text;
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 25
+    };
+    var str = "";
+    var x;
+    for (x in person) {
+        str += person[x];
+    }
+    document.getElementById("for-in").innerHTML = str;
+</script>
+
+</body>
+</html>
