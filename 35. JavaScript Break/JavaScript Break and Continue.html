@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Break and Continue</title>
+</head>
+<body>
+<h3>The Break Statement</h3>
+<p id="break"></p>
+
+<h3>The Continue Statement</h3>
+<p id="continue"></p>
+
+<script>
+    /**
+     * @description break用于完全结束一个循环，跳出循环体执行循环后面的语句。
+     * 以下例子，i输出的值为0,1,2.
+     */
+    var i, text = '';
+    for (i = 0; i < 10; i++) {
+        if (i === 3) {
+            break;
+        }
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("break").innerHTML = text;
+    /**
+     * @description continue是跳过当次循环中剩下的语句，执行下一次循环。
+     * 以下例子，i输出的值为0,1,2,4,5,6，7,8,9
+     */
+    var i, text = '';
+    for (i = 0; i < 10; i++) {
+        if (i === 3) {
+            continue;
+        }
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("continue").innerHTML = text;
+</script>
+</body>
+</html>
