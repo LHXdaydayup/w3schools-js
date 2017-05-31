@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Type Conversion</title>
+</head>
+<body>
+<h3>The typeof Operator</h3>
+<p id="type-of"></p>
+
+<h3>The Data Type of typeof</h3>
+<h3>The constructor Property</h3>
+<p id="constructor"></p>
+<p id="is-array-1"></p>
+<p id="is-array-2"></p>
+<p id="is-date-1"></p>
+<p id="is-date-2"></p>
+
+<h3>JavaScript Type Conversion</h3>
+<h3>Converting Numbers to Strings</h3>
+<p id="string"></p>
+<p id="to-string"></p>
+
+<h3>Converting Booleans to Strings</h3>
+<p id="boolean-to-string"></p>
+
+<h3>Converting Dates to Strings</h3>
+<p id="date-to-string"></p>
+
+<h3>Converting Strings to Numbers</h3>
+<p id="string-to-number"></p>
+
+<script>
+    /**
+     * 使用typeof得到一个JavaScript变量的数据类型
+     */
+    document.getElementById("type-of").innerHTML =
+            typeof "john" + "<br>" +
+            typeof 3.14 + "<br>" +
+            typeof NaN + "<br>" +
+            typeof false + "<br>" +
+            typeof [1, 2, 3, 4] + "<br>" +
+            typeof {name: 'john', age: 34} + "<br>" +
+            typeof new Date() + "<br>" +
+            typeof function () {
+            } + "<br>" +
+            typeof car + "<br>" +
+            typeof null;
+    document.getElementById("constructor").innerHTML =
+            "john".constructor + "<br>" +
+            (3.14).constructor + "<br>" +
+            false.constructor + "<br>" +
+            [1, 2, 3, 4].constructor + "<br>" +
+            {name: 'john', age: 34}.constructor + "<br>" +
+            new Date().constructor + "<br>" +
+            function () {
+            }.constructor;
+    /**
+     * 判断传入的参数是不是数组
+     * @param arr 数组
+     * @returns {boolean} 如果入参是数组返回true，否则返回false
+     */
+    function isArray1(arr) {
+        return arr.constructor.toString().indexOf("Array") > -1;
+    }
+    /**
+     * 判断传入的参数是不是数组-方式2
+     * @param arr 数组
+     * @returns {boolean} 如果入参是数组返回true，否则返回false
+     */
+    function isArray2(arr) {
+        return arr.constructor === Array;
+    }
+    var a = [1, 2, 3, 4];
+    document.getElementById("is-array-1").textContent = isArray1(a);
+    document.getElementById("is-array-2").textContent = isArray2(a);
+    /**
+     * 判断传入的参数是不是日期对象
+     * @param date 日期
+     * @returns {boolean} 如果入参是日期对象返回true，否则返回false
+     */
+    function isDate1(date) {
+        return date.constructor.toString().indexOf("Date") > -1;
+    }
+    /**
+     * 判断传入的参数是不是日期对象-方式2
+     * @param date 日期
+     * @returns {boolean} 如果入参是日期对象返回true，否则返回false
+     */
+    function isDate2(date) {
+        return date.constructor === Date;
+    }
+    var d = new Date();
+    document.getElementById("is-date-1").textContent = isDate1(d);
+    document.getElementById("is-date-2").textContent = isDate2(d);
+    var x = 213;
+    document.getElementById("string").innerHTML =
+            String(x) + "<br>" +
+            String(1243) + "<br>" +
+            String(34 + 3);
+    document.getElementById("to-string").innerHTML =
+            x.toString() + "<br>" +
+            (1243).toString() + "<br>" +
+            (34 + 3).toString();
+    document.getElementById("boolean-to-string").innerHTML =
+            String(true) + "<br>" +
+            String(false);
+    document.getElementById("date-to-string").textContent = String(new Date());
+    document.getElementById("string-to-number").innerHTML =
+            Number("3.14") + "<br>" +
+            Number(" ") + "<br>" +
+            Number("") + "<br>" +
+            Number("99 88");
+</script>
+</body>
+</html>
