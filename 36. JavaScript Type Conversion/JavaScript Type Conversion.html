@@ -57,7 +57,7 @@
             }.constructor;
     /**
      * 判断传入的参数是不是数组
-     * @param arr 数组
+     * @param {*} arr 变量有可能是数组
      * @returns {boolean} 如果入参是数组返回true，否则返回false
      */
     function isArray1(arr) {
@@ -65,18 +65,18 @@
     }
     /**
      * 判断传入的参数是不是数组-方式2
-     * @param arr 数组
+     * @param {*} arr 变量有可能是数组
      * @returns {boolean} 如果入参是数组返回true，否则返回false
      */
     function isArray2(arr) {
         return arr.constructor === Array;
     }
     var a = [1, 2, 3, 4];
-    document.getElementById("is-array-1").textContent = isArray1(a);
-    document.getElementById("is-array-2").textContent = isArray2(a);
+    document.getElementById("is-array-1").textContent = isArray1(a).toString();
+    document.getElementById("is-array-2").textContent = isArray2(a).toString();
     /**
      * 判断传入的参数是不是日期对象
-     * @param date 日期
+     * @param {*} date 有可能是日期
      * @returns {boolean} 如果入参是日期对象返回true，否则返回false
      */
     function isDate1(date) {
@@ -84,15 +84,15 @@
     }
     /**
      * 判断传入的参数是不是日期对象-方式2
-     * @param date 日期
+     * @param {*} date 有可能是日期
      * @returns {boolean} 如果入参是日期对象返回true，否则返回false
      */
     function isDate2(date) {
         return date.constructor === Date;
     }
     var d = new Date();
-    document.getElementById("is-date-1").textContent = isDate1(d);
-    document.getElementById("is-date-2").textContent = isDate2(d);
+    document.getElementById("is-date-1").textContent = isDate1(d).toString();
+    document.getElementById("is-date-2").textContent = isDate2(d).toString();
     var x = 213;
     document.getElementById("string").innerHTML =
             String(x) + "<br>" +
