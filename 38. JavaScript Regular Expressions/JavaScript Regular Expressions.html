@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Regular Expressions</title>
+</head>
+<body>
+<h3>Using String Methods</h3>
+<h3>Using String search() With a Regular Expression</h3>
+<p id="search"></p>
+
+<h3>Using String search() With String</h3>
+<p id="search-string"></p>
+
+<h3>Use String replace() With a Regular Expression</h3>
+<p id="replace"></p>
+<p id="replace-string"></p>
+
+<h3>Regular Expression Patterns</h3>
+<h3>Using test()</h3>
+<p id="test"></p>
+<p id="shorten-test"></p>
+
+<h3>Using exec()</h3>
+<p id="exec"></p>
+
+<script>
+    /**
+     * @description /World/i  is a regular expression.
+     * World is a pattern (to be used in a search).
+     * i is a modifier (modifies the search to be case-insensitive)
+     * The search() method uses an expression to search for a match, and returns the position of the match.
+     * The replace() method returns a modified string where the pattern is replaced.
+     * @type {string}
+     */
+    var str = "Hello World";
+    var n = str.search(/World/i);
+    document.getElementById("search").textContent = n;
+    document.getElementById("search-string").textContent = str.search("World");
+    var str = "Visit World!";
+    var res = str.replace(/visit/i, "Hello");
+    document.getElementById("replace").textContent = res;
+    document.getElementById("replace-string").textContent = str.replace("Visit", "Hello");
+    var patt = /o/;
+    document.getElementById("test").textContent = patt.test(str);
+    document.getElementById("shorten-test").textContent = /o/.test(str);
+    document.getElementById("exec").textContent = /o/.exec(str);
+</script>
+</body>
+</html>
