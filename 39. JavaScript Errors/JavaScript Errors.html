@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Errors</title>
+</head>
+<body>
+<h3>Errors Will Happen!</h3>
+<p id="error"></p>
+
+<h3>Input Validation Example</h3>
+<p>Please input a number between 5 and 10:</p>
+
+<input id="number">
+<button type="button" onclick="validation()">校验输入</button>
+<button type="button" onclick="validationAndReset()">校验并重置</button>
+<p id="message"></p>
+
+<h3>Range Error</h3>
+<p id="range-error"></p>
+
+<h3>Reference Error</h3>
+<p id="reference-error"></p>
+
+<h3>Syntax Error</h3>
+<p id="syntax-error"></p>
+
+<h3>Type Error</h3>
+<p id="type-error"></p>
+
+<h3>URI Error</h3>
+<p id="uri-error"></p>
+
+<script>
+    /**
+     * The try statement lets you test a block of code for errors. The catch statement lets you handle the error.
+     */
+    try {
+        console.log("Good good study, day day up! ");
+    } catch (err) {
+        document.getElementById("error").textContent = err.message;
+    }
+    /**
+     * 校验id为number的输入框的值是否合法
+     */
+    function validation() {
+        var message, x;
+        message = document.getElementById("message");
+        message.textContent = "";
+        x = document.getElementById("number").value;
+        try {
+            if (x === "") {
+                throw "empty";
+            }
+            if (isNaN(x)) {
+                throw "not a number";
+            }
+            x = Number(x);
+            if (x < 5) {
+                throw "too low";
+            }
+            if (x > 10) {
+                throw "too high";
+            }
+        } catch (err) {
+            message.textContent = "Input is " + err;
+        }
+    }
+    /**
+     * 校验id为number的输入框的值是否合法并且重置为空
+     */
+    function validationAndReset() {
+        var message, x;
+        message = document.getElementById("message");
+        message.textContent = "";
+        x = document.getElementById("number").value;
+        try {
+            if (x === "") {
+                throw "is empty";
+            }
+            if (isNaN(x)) {
+                throw "is not a number";
+            }
+            x = Number(x);
+            if (x < 5) {
+                throw "is too low";
+            }
+            if (x > 10) {
+                throw "is too high";
+            }
+        } catch (err) {
+            message.textContent = "Error: " + err + ".";
+        } finally {
+            document.getElementById("number").value = "";
+        }
+    }
+    //A RangeError is thrown if you use a number that is outside the range of legal values
+    var num = 1;
+    try {
+        num.toPrecision(520);
+    } catch (err) {
+        document.getElementById("range-error").textContent = err.name;
+    }
+    //A ReferenceError is thrown if you use (reference) a variable that has not been declared
+    var x;
+    try {
+        x = y + 1;
+    } catch (err) {
+        document.getElementById("reference-error").textContent = err.name;
+    }
+    //A SyntaxError is thrown if you try to evaluate code with a syntax error
+    try {
+        eval("console.log('Come on!)");   // Missing ' will produce an error
+    } catch (err) {
+        document.getElementById("syntax-error").textContent = err.name;
+    }
+    //A TypeError is thrown if you use a value that is outside the range of expected types
+    try {
+        num.toUpperCase();
+    } catch (err) {
+        document.getElementById("type-error").textContent = err.name;
+    }
+    //A URIError is thrown if you use illegal characters in a URI function
+    try {
+        decodeURI("****");
+    } catch (err) {
+        document.getElementById("uri-error").textContent = err.name;
+    }
+</script>
+</body>
+</html>
