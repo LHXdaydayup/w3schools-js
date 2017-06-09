@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Hoisting</title>
+</head>
+<body>
+<h3>JavaScript Declarations are Hoisted</h3>
+<p id="hoist"></p>
+
+<h3>JavaScript Initializations are Not Hoisted</h3>
+<p id="not-hoisted"></p>
+
+<script>
+    x = 5; // Assign 5 to x
+    var elem = document.getElementById("hoist"); // Find an element
+    elem.textContent = x;  // Display x in the element
+    var x; // Declare x
+    /**
+     * JavaScript only hoists declarations, not initializations.
+     * @type {number}
+     */
+    var a = 5; // Initialize a
+    document.getElementById("not-hoisted").textContent = a + " " + b; // Display a and b
+    var b = 7; // Initialize b
+</script>
+
+</body>
+</html>

@@ -94,33 +94,32 @@
             document.getElementById("number").value = "";
         }
     }
-    //A RangeError is thrown if you use a number that is outside the range of legal values
+
     var num = 1;
     try {
         num.toPrecision(520);
     } catch (err) {
         document.getElementById("range-error").textContent = err.name;
     }
-    //A ReferenceError is thrown if you use (reference) a variable that has not been declared
+
     var x;
     try {
         x = y + 1;
     } catch (err) {
         document.getElementById("reference-error").textContent = err.name;
     }
-    //A SyntaxError is thrown if you try to evaluate code with a syntax error
+
     try {
         eval("console.log('Come on!)");   // Missing ' will produce an error
     } catch (err) {
         document.getElementById("syntax-error").textContent = err.name;
     }
-    //A TypeError is thrown if you use a value that is outside the range of expected types
+
     try {
         num.toUpperCase();
     } catch (err) {
         document.getElementById("type-error").textContent = err.name;
     }
-    //A URIError is thrown if you use illegal characters in a URI function
     try {
         decodeURI("****");
     } catch (err) {
