@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Use Strict</title>
+</head>
+<body>
+<script>
+    "use strict";
+    try {
+        x = 3.14;       // This will cause an error because x is not declared
+    } catch (err) {
+        console.log(err.name);
+    }
+    func();
+    function func() {
+        try {
+            y = 3.14;   // This will also cause an error because y is not declared
+        } catch (err) {
+            console.log(err.name);
+        }
+    }
+    functionUseStrict();
+    function functionUseStrict() {
+        "use strict";
+        try {
+            b = 3.14;   // This will cause an error
+        } catch (err) {
+            console.log(err.name);
+        }
+    }
+    var pi = 3.14;
+    delete pi;     //Uncaught SyntaxError: Delete of an unqualified identifier in strict mode.
+    function x(p1, p1) {    //Uncaught SyntaxError: Duplicate parameter name not allowed in this context
+    }
+    var x = 010; //Uncaught SyntaxError: Octal literals are not allowed in strict mode.
+    var x = \010; //Uncaught SyntaxError: Invalid or unexpected token
+    var obj = {};
+    Object.defineProperty(obj, "x", {value: 0, writable: false});
+    obj.x = 3.14;            // Uncaught TypeError: Cannot assign to read only property 'x' of object '#<Object>'
+    var obj = {
+        get x() {
+            return 0
+        }
+    };
+    obj.x = 3.14;            //Uncaught TypeError: Cannot set property x of #<Object> which has only a getter
+    delete Object.prototype;      //Uncaught TypeError: Cannot delete property 'prototype' of function Object() { [native code] }
+    var eval = 3.14;  //Uncaught SyntaxError: Unexpected eval or arguments in strict mode
+    var arguments = 3.14;   //Uncaught SyntaxError: Unexpected eval or arguments in strict mode
+    with (Math) {
+        x = cos(2)
+    };      //Uncaught SyntaxError: Strict mode code may not include a with statement
+    eval("var c = 2");
+    alert(c);     //Uncaught ReferenceError: c is not defined
+</script>
+
+</body>
+</html>
