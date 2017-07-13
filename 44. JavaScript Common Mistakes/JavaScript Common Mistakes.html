@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Common Mistakes</title>
+</head>
+<body>
+<h3>Accidentally Using the Assignment Operator</h3>
+<p id="assign-10"></p>
+<p id="assign-0"></p>
+
+<h3>Expecting Loose Comparison</h3>
+<p id="regular-comparison"></p>
+<p id="strict-comparison"></p>
+<p id="switch">Hello</p>
+
+<h3>Confusing Addition & Concatenation</h3>
+<p id="addition"></p>
+
+<h3>Misunderstanding Floats</h3>
+<p id="float"></p>
+
+<h3>Misplacing Semicolon</h3>
+<p id="misplacing-semicolon">Hello</p>
+
+<script>
+    var x = 0;
+    document.getElementById("assign-10").textContent = Boolean(x = 10).toString();//This if statement returns true (maybe not as expected), because 10 is true
+    document.getElementById("assign-0").textContent = Boolean(x = 0).toString();//This if statement returns false (maybe not as expected), because 0 is false
+    var a = 10;
+    var b = "10";
+    document.getElementById("regular-comparison").textContent = Boolean(a == b).toString();//In regular comparison, data type does not matter. This if statement returns true
+    document.getElementById("strict-comparison").textContent = Boolean(a === b).toString();//In strict comparison, data type does matter. This if statement returns false
+    switch (a) {//It is a common mistake to forget that switch statements use strict comparison
+        case "10":
+            document.getElementById("regular-comparison").textContent = "Hi";
+    }
+    document.getElementById("addition").innerHTML = (10 + 5) + "<br>" + (10 + "5");//adding a number as a number will produce a different result from adding a number as a string
+    /*
+     All programming languages, including JavaScript,
+     have difficulties with precise floating point values
+     */
+    var c = 0.1, d = 0.2;
+    var e = c + d;
+    document.getElementById("float").innerHTML = e;
+    /*Because of a misplaced semicolon,
+     this code block will execute regardless of the value of x
+     */
+    var f = 5;
+    if (f === 19);
+    {
+        document.getElementById("misplacing-semicolon").textContent = 'Hi';
+    }
+    /*Accessing Arrays with Named Indexes
+     JavaScript does not support arrays with named indexes.
+     In JavaScript, arrays use numbered indexes
+     */
+    var car = [];
+    car[0] = "TOYOTA";
+    car[1] = "red";
+    car[2] = 50000;
+    var g = car.length;         // car.length will return 3
+    var h = car[0];             // car[0] will return "TOYOTA"
+    /*In JavaScript, objects use named indexes.
+     If you use a named index, when accessing an array, JavaScript will redefine the array to a standard object.
+     After the automatic redefinition, array methods and properties will produce undefined or incorrect results
+     */
+    var person = [];
+    person["firstName"] = "John";
+    person["lastName"] = "Doe";
+    person["age"] = 46;
+    var i = person.length;         // person.length will return 0
+    var j = person[0];             // person[0] will return undefined
+    /*Undefined is Not Null
+     With JavaScript, null is for objects, undefined is for variables, properties, and methods.
+     To be null, an object has to be defined, otherwise it will be undefined.
+     If you want to test if an object exists, this will throw an error if the object is undefined:
+     */
+    if (obj !== null && typeof obj !== "undefined") {
+    }
+</script>
+
+</body>
+</html>
